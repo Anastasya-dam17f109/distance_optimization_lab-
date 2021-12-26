@@ -4,19 +4,23 @@ import sympy as sp
 import math
 import random
 import copy
+import json
 import scipy.spatial.distance
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-n = 4
+with open("task.json", 'r') as task_file:
+    task = json.load(task_file)
+
+n = task["points_number"]
 # радиус сферы
-rad = 1
+rad = task["R"]
 # число генерируемых точек
 N = n + 3
 # заданная точность
-eps = 0.001
+eps = task["precision"]
 # максимальное число итераций
-n_iter_max = 10000
+n_iter_max = task["iterations_max"]
 
 # вычисление евклидового расстояния между оптимизируемыми точками
 

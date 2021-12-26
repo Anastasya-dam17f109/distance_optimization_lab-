@@ -1,0 +1,6 @@
+{
+  "points_number" : 4,
+  "R": 1,
+  "precision": 0.001,
+  "iterations_max" : 10000
+}
